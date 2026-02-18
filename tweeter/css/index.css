@@ -1,0 +1,20 @@
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: #e8f5fd;
+}
+nav{
+    background-color: white;
+    width: 100vw;
+    height: 10vh;
+}
+.nav{
+    display: flex;
+    justify-content: center;
+}
+.nav-brand{
+    display: flex;
+    align-items: center;
+    gap: 15%;
+}
