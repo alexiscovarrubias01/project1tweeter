@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tweeter</title>
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="/tweeter/css/index.css">
+  <link rel="stylesheet" href="../css/index.css">
 </head>
 
 <body>
@@ -14,16 +13,48 @@
   <header>
     <nav class="nav">
       <div class="nav-brand">
-        <img src="/tweeter/img/twitter.svg" alt="Tweeter logo" class="nav-logo">
+        <img src="../img/twitter.png" alt="Tweeter logo" class="nav-logo">
         <h1 class="nav-title">Tweeter</h1>
       </div>
     </nav>
   </header>
 
   <main>
-    
+    <div class="content-container">
+
+      <div class="pfp-input-container">
+        <div class="pfp-border">
+          <img src="../img/clown cat.jpeg" alt="pfp" class="pfp">
+        </div>
+          <textarea class="tweet-input" placeholder="What's happening?"></textarea>
+      </div>
+
+      <div class="characterlimit-button-container">
+        <p id="character-limit">160 char remaining</p>
+        <button class="tweet-button">Tweet</button>
+      </div>
+
+
+      <div class="tweet-display">
+        <div class="pfp-border">
+          <img src="../img/clown cat.jpeg" alt="pfp" class="pfp">
+        </div>
+
+        <div class="tweet-content">
+        <p class="tweet-author">Alexis Covarrubias <span class="tweet-handle">@alex_is · 5hr · 2/27/26</span></p>
+        <p class="tweet-text">Hey, CSCI 3342 is cool!</p>
+          <div class="tweet-icons">
+            <span>💬</span>
+            <span>🔁</span>
+            <span>❤️</span>
+            <span>📤</span>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
   </main>
 
-  <script src="/tweeter/js/jquery.js"></script>
 </body>
 </html>
