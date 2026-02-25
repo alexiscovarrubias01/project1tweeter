@@ -7,28 +7,23 @@ $(document).ready(function () {
   const $characterLimit = $("#character-limit");
   const $tweetText = $(".tweet-text");
 
-  // Function: Validate input
   function validateTweet() {
     const textLength = $tweetInput.val().trim().length;
 
     if (textLength === 0) {
-      // Empty → disabled, keep original color
       $tweetButton.prop("disabled", true);
       $tweetButton.css("background-color", "");
     } 
     else if (textLength > MAX_LENGTH) {
-      // Over 160 → disabled + grey
       $tweetButton.prop("disabled", true);
       $tweetButton.css("background-color", "#cccccc");
     } 
     else {
-      // Valid → enabled + blue
       $tweetButton.prop("disabled", false);
       $tweetButton.css("background-color", "#1da1f2");
     }
   }
 
-  // Function: Update remaining characters
   function updateCharacterCount() {
     const remaining = MAX_LENGTH - $tweetInput.val().length;
     $characterLimit.text(remaining + " char remaining");
@@ -40,13 +35,11 @@ $(document).ready(function () {
     }
   }
 
-  // When typing
   $tweetInput.on("input", function () {
     updateCharacterCount();
     validateTweet();
   });
 
-  // When clicking Tweet
   $tweetButton.on("click", function () {
     const tweet = $tweetInput.val().trim();
 
@@ -58,7 +51,6 @@ $(document).ready(function () {
     }
   });
 
-  // Initial state
   $tweetButton.prop("disabled", true);
 
 });
