@@ -32,8 +32,8 @@ nav {
 }
 
 .nav-logo {
-    height: 40%;
-    width: 40%;
+    height: clamp(30px, 5vh, 60px);
+    width: auto;
 }
 
 .content-container {
